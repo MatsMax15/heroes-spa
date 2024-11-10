@@ -1,7 +1,12 @@
+import { TitlePage } from '../../ui/components'
+import { HeroList } from '../components'
+
 export const DCPage = () => {
 	return (
 		<>
-			<h1>DC</h1>
+			<TitlePage title='DC Comics' />
+
+			<HeroList publisher='DC Comics' />
 		</>
 	)
 }

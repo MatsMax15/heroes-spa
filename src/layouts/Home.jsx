@@ -1,10 +1,16 @@
-import { Outlet } from 'react-router-dom'
+import { ScrollRestoration } from 'react-router-dom'
+import { AppMain, AppSidebar, SidebarProvider } from '../ui'
 
 export const Home = () => {
 	return (
 		<>
-			<h1>Home</h1>
-			<Outlet />
+			<SidebarProvider>
+				<AppSidebar />
+
+				<AppMain />
+
+				<ScrollRestoration />
+			</SidebarProvider>
 		</>
 	)
 }

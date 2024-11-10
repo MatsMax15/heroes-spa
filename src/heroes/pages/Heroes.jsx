@@ -1,7 +1,7 @@
 export const HeroesPage = () => {
 	return (
 		<>
-			<h1>Heroes</h1>
+			<h1 className=''>Heroes</h1>
 		</>
 	)
 }

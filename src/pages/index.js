@@ -5,3 +5,8 @@ export * from './../auth/pages/LoginPage'
 export * from './../heroes/pages/Heroes'
 export * from './../heroes/pages/DCPage'
 export * from './../heroes/pages/MarvelPage'
+export * from './../heroes/pages/HeroPage'
+export * from './../heroes/pages/SearchPage'
+
+// Import all pages from config
+export * from './ConfigPage'
