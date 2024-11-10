@@ -7,13 +7,17 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from '../../ui/components'
+import { useMemo } from 'react'
 
 export const HeroesCarousel = ({ publisher, current }) => {
-	const heroes = getHeroesCarousel({ publisher, id: current })
+	const heroes = useMemo(
+		() => getHeroesCarousel({ publisher, id: current }),
+		[publisher, current]
+	)
 
 	return (
 		<>
-			<div className='relative flex items-center justify-center w-full'>
+			<div className='relative flex items-center justify-center w-full border-t-2 border-gray-400/40'>
 				<Carousel
 					opts={{
 						align: 'start',
