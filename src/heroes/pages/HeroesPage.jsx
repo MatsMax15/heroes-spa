@@ -1,10 +1,14 @@
 import { Fade } from 'react-awesome-reveal'
 import { getHeroesRandom, getRandomValues } from '../helpers'
 import { cn } from './../../lib/utils'
+import { useSidebar } from '../../ui/components'
 
 export const HeroesPage = () => {
+	const { isMobile } = useSidebar()
 	const heroesGroups = getHeroesRandom()
-	const { randomDirection, randomGrayscale, ramdomSize } = getRandomValues()
+	const { randomDirection, randomGrayscale, ramdomSize } = getRandomValues({
+		isMobile,
+	})
 
 	return (
 		<div className='flex justify-center'>

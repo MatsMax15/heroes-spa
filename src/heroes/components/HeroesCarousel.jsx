@@ -1,4 +1,7 @@
+import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { Fade } from 'react-awesome-reveal'
+
 import { getHeroesCarousel } from '../helpers'
 import {
 	Carousel,
@@ -7,7 +10,7 @@ import {
 	CarouselNext,
 	CarouselPrevious,
 } from '../../ui/components'
-import { useMemo } from 'react'
+import { cn } from '../../lib/utils'
 
 export const HeroesCarousel = ({ publisher, current }) => {
 	const heroes = useMemo(
@@ -34,11 +37,19 @@ export const HeroesCarousel = ({ publisher, current }) => {
 									to={`/hero/${heroe.id}`}
 									className='rounded-xl p-4 w-28 group'
 								>
-									<img
-										src={`./../assets/heroes/${heroe.id}.jpg`}
-										alt={heroe.superhero}
-										className='w-20 rounded-xl shadow-sm shadow-black group-hover:shadow-md group-hover:shadow-black transition duration-300'
-									/>
+									<Fade triggerOnce>
+										<img
+											src={`./../assets/heroes/${heroe.id}.jpg`}
+											alt={heroe.superhero}
+											className={cn(
+												'w-20 rounded-xl shadow-sm shadow-black group-hover:shadow-md group-hover:shadow-black hover:filter-none',
+												{
+													'filter grayscale-[70%] brightness-75':
+														current !== heroe.id,
+												}
+											)}
+										/>
+									</Fade>
 								</Link>
 							</CarouselItem>
 						))}

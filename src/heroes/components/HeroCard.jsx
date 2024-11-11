@@ -21,7 +21,7 @@ export const HeroCard = ({
 	return (
 		<>
 			<Fade duration={300} direction='up' triggerOnce={true}>
-				<div className='flex flex-row shadow shadow-gray-300 rounded-xl hover:shadow-lg transition duration-300 hover:shadow-gray-400 border border-gray-300/60'>
+				<div className='flex flex-row shadow bg-slate-100 shadow-gray-300 rounded-xl hover:shadow-lg transition duration-300 hover:shadow-gray-400 border border-gray-300/60'>
 					<img
 						src={heroImage}
 						alt={superhero}

@@ -15,8 +15,10 @@ export const AppMain = () => {
 			>
 				<AppNavbar />
 
-				<div className='min-h-[calc(100%-3.5rem)] bg-background-min rounded-xl shadow p-4'>
-					<Outlet />
+				<div className='min-h-[calc(100%-3.5rem)] bg-background-min rounded-xl shadow p-4 block md:flex justify-center'>
+					<section className='w-full md:max-w-[1080px]'>
+						<Outlet />
+					</section>
 				</div>
 			</main>
 		</>

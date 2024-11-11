@@ -1,5 +1,5 @@
-export const getRandomValues = () => {
-	const sizes = ['h-96', 'h-52', 'h-32']
+export const getRandomValues = ({ isMobile }) => {
+	const sizes = isMobile ? ['h-96', 'h-44', 'h-16'] : ['h-96', 'h-56', 'h-32']
 	const directions = ['up', 'down', 'left', 'right']
 	const grayscale = ['grayscale', 'grayscale-[25%]', 'grayscale-[50%]']
 
